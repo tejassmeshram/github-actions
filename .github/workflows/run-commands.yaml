@@ -1,0 +1,25 @@
+name: run commands
+
+on: push
+
+jobs:
+  run-linux-commands:
+    name: Run Linux Commands
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Echo something
+        run: echo something
+      - name: Echo something else
+        run: echo something else
+        
+  run-windows-commands:
+    name: Run Windows Commands
+    runs-on: windows-latest
+    
+    steps:
+      - name: Run in Powershell
+        run: get-location
+      - name: Run in Bash
+        run: pwd
+        shell: bash
