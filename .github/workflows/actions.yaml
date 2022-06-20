@@ -14,7 +14,7 @@ jobs:
           ls
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
-          echo $github.token
+          echo "${{ github.token }}"
           
       - name: Checkout
         uses: actions/checkout@v1
