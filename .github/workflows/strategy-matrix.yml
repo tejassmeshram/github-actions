@@ -13,6 +13,12 @@ jobs:
           - 6
           - 8
           - 10
+        exclude:
+          - os: windows-latest
+        include:
+          - os: ubuntu-latest
+            node-version: 8
+            new-variable: 'true'
     runs-on: ${{ matrix.os }}
     
     steps:
@@ -23,4 +29,8 @@ jobs:
         
       - name: Log Node Version
         run: node -v
+        
+      - name: New Variable
+        if: ${{ matrix.new-variable == 'true' }}
+        run: echo ${{ matrix.new-variable }}
         
