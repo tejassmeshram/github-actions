@@ -2,11 +2,11 @@ name: Run on Container
 on: push
 
 jobs:
-  name: Run Terraform
-  runs-on: ubuntu-latest
-  container:
-    image: hashicorp/terraform:0.13.6
+  run-terraform:
+    runs-on: ubuntu-latest
+    container:
+      image: hashicorp/terraform:0.13.6
     
-  steps:
-    - name: Print terraform version
-      run: terraform -v
+    steps:
+      - name: Print terraform version
+        run: terraform -v
