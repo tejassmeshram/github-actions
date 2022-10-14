@@ -1,0 +1,2 @@
+This file will be committed directly to `master` branch.
+It's expected that the merge-master-to-develop gha workflow would run, and create this same file in develop branch as well.
