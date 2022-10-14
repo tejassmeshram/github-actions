@@ -1,0 +1,4 @@
+This file will be committed in develop branch first.
+And then committed to master branch.
+It's expected that the merge-master-to-develop workflow would run, attempt to push changes to develop, but since there would be no new changes - 
+it should end successfully without any updates.
